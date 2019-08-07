@@ -1,0 +1,41 @@
+version: '3.5'
+services:
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: springbatch
+      POSTGRES_USER: guest
+      POSTGRES_PASSWORD: welcome1
+      PG_DATA: /data/postgres/springbatch
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin4
+    restart: unless-stopped
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin:/root/.pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: dbatista@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: welcome1
+    ports:
+      - "11899:80"
+
+
+volumes:
+  postgres:
+  pgadmin:
+
+# networks:
+  # postgres:
+    # driver: bridge
