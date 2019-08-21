@@ -15,3 +15,5 @@ mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-
 
 truncate table batch_job_execution cascade;
 truncate table batch_job_instance cascade;
+
+# curl (win10)
