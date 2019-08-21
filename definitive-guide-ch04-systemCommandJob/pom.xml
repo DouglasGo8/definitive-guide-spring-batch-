@@ -8,7 +8,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.apress.springbatch.systemcommand</groupId>
     <artifactId>definitive-guide-ch04-systemCommandJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 

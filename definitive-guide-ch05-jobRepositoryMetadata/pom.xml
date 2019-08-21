@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>definitive-guide-ch04-helloWorldJob</artifactId>
+    <artifactId>definitive-guide-ch05-jobRepositoryMetadata</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch04-helloWorldJob</name>
+    <name>definitive-guide-ch05-jobRepositoryMetadata</name>
     <description>Add project description here</description>
 
     <properties>
@@ -63,10 +63,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
