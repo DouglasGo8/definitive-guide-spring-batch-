@@ -28,6 +28,8 @@
         <module>definitive-guide-ch05-jobRepositoryMetadata</module>
         <module>definitive-guide-ch06-noJobRun</module>
         <module>definitive-guide-ch06-launchJobRest</module>
+        <module>definitive-guide-ch06-scheduleQuartz</module>
+        <module>definitive-guide-ch06-transactionProcessingJob</module>
     </modules>
 
     <dependencies>
