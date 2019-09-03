@@ -33,7 +33,7 @@
         <module>definitive-guide-ch06-transactionProcessingJob</module>
         <module>definitive-guide-ch07-fixedWidthFiles</module>
         <module>definitive-guide-ch07-delimitedFiles</module>
-        <module>definitive-guide-ch07-delimitedLineTokenizerFiles</module>
+        
     </modules>
 
     <dependencies>

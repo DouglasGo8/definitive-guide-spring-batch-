@@ -1,5 +1,3 @@
-
-
 # Github
 <https://github.com/Apress/def-guide-spring-batch />
 
