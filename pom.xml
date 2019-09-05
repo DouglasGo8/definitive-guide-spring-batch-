@@ -35,6 +35,7 @@
         <module>definitive-guide-ch07-delimitedFiles</module>
         <module>definitive-guide-ch07-delimitedLineTokenize</module>
         <module>definitive-guide-ch07-multipleFormatJob</module>
+        <module>definitive-guide-ch07-multiLineJob</module>
     </modules>
 
     <dependencies>

@@ -1,7 +1,9 @@
-package com.apress.springbatch.multiple.format;
+package com.apress.springbatch.multiline;
 
-import com.apress.springbatch.multiple.format.batch.TransactionFieldSetMapper;
-import com.apress.springbatch.multiple.format.domain.Customer;
+
+import com.apress.springbatch.multiline.batch.CustomerFileReader;
+import com.apress.springbatch.multiline.batch.TransactionFieldSetMapper;
+import com.apress.springbatch.multiline.domain.Customer;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -34,7 +36,7 @@ import static java.lang.System.out;
 @EnableBatchProcessing
 @SpringBootApplication
 @SuppressWarnings("unchecked")
-public class MultipleFormatApplication {
+public class MultiLineApplication {
 
 
     @Autowired
@@ -54,58 +56,77 @@ public class MultipleFormatApplication {
     }
 
     @Bean
+
+    public CustomerFileReader customerFileReader() {
+        return new CustomerFileReader(this.customerItemReader(null));
+    }
+
+
+    @Bean
     public PatternMatchingCompositeLineMapper lineTokenizer() {
 
         Map<String, LineTokenizer> lineTokenizers = new HashMap<>(2);
-
-        lineTokenizers.put("CUST*", this.customerLineTokenizer());
-        lineTokenizers.put("TRANS*", this.transactionLineTokenizer());
+        lineTokenizers.put("CUST*", customerLineTokenizer());
+        lineTokenizers.put("TRANS*", transactionLineTokenizer());
 
         Map<String, FieldSetMapper> fieldSetMappers = new HashMap<>(2);
-        BeanWrapperFieldSetMapper<Customer> customerFieldSetMapper = new BeanWrapperFieldSetMapper<>();
 
+        BeanWrapperFieldSetMapper<Customer> customerFieldSetMapper =
+                new BeanWrapperFieldSetMapper<>();
         customerFieldSetMapper.setTargetType(Customer.class);
 
         fieldSetMappers.put("CUST*", customerFieldSetMapper);
         fieldSetMappers.put("TRANS*", new TransactionFieldSetMapper());
 
-        PatternMatchingCompositeLineMapper compositeLineMappers = new PatternMatchingCompositeLineMapper();
+        PatternMatchingCompositeLineMapper lineMappers = new PatternMatchingCompositeLineMapper();
 
-        compositeLineMappers.setTokenizers(lineTokenizers);
-        compositeLineMappers.setFieldSetMappers(fieldSetMappers);
+        lineMappers.setTokenizers(lineTokenizers);
+        lineMappers.setFieldSetMappers(fieldSetMappers);
 
-        return compositeLineMappers;
+        return lineMappers;
     }
 
     @Bean
     public DelimitedLineTokenizer transactionLineTokenizer() {
-        DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
-        lineTokenizer.setNames("prefix", "accountNumber", "transactionDate", "amount");
+        DelimitedLineTokenizer lineTokenizer =
+                new DelimitedLineTokenizer();
+
+        lineTokenizer.setNames("prefix",
+                "accountNumber",
+                "transactionDate",
+                "amount");
+
         return lineTokenizer;
     }
 
     @Bean
     public DelimitedLineTokenizer customerLineTokenizer() {
-
         DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
 
-        lineTokenizer.setNames("firstName", "middleInitial", "lastName", "address", "city", "state", "zipCode");
+        lineTokenizer.setNames("firstName",
+                "middleInitial",
+                "lastName",
+                "address",
+                "city",
+                "state",
+                "zipCode");
 
         lineTokenizer.setIncludedFields(1, 2, 3, 4, 5, 6, 7);
 
         return lineTokenizer;
     }
 
+    //
     @Bean
     public ItemWriter itemWriter() {
-        return (items) -> items.parallelStream().forEach(out::println);
+        return (items) -> items.forEach(out::println);
     }
 
     @Bean
     public Step copyFileStep() {
         return this.stepBuilderFactory.get("copyFileStep")
                 .<Customer, Customer>chunk(10)
-                .reader(this.customerItemReader(null))
+                .reader(this.customerFileReader())
                 .writer(this.itemWriter())
                 .build();
     }
@@ -118,6 +139,6 @@ public class MultipleFormatApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(MultipleFormatApplication.class, args);
+        SpringApplication.run(MultiLineApplication.class, args);
     }
 }
