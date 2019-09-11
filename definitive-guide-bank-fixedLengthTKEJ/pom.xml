@@ -12,8 +12,8 @@
     <artifactId>definitive-guide-bank-fixedLengthTKEJ</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-bank-fixedLengthTKEJ</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Bank :: Fixed Length :: Cassandra</name>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,6 +69,10 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

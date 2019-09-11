@@ -7,6 +7,7 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=name=Douglas
 
 # fixedLengthTKEJ
 mvn spring-boot:run -D"spring-boot.run.arguments"=patrimonyFile=file:./src/main/resources/input/patrimony.dat 
+java -jar .\target\definitive-guide-bank-fixedLengthTKEJ-1.0-SNAPSHOT.jar patrimonyFile=file:./src/main/resources/input/patrimony.dat 
 
 # Chapter 04 -  helloWorldJob
 mvn spring-boot:run -D"spring-boot.run.arguments"=fileName=file.csv 
@@ -35,7 +36,6 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 07 - xmlFile parameters
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.xml
 
-
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 
@@ -47,7 +47,8 @@ truncate table batch_job_instance cascade;
 
 
 # Keyspace
-CREATE KEYSPACE aq00pld_lab WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 1 }
+CREATE KEYSPACE aq00pld_lab WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 1 };
 
 #
+use aq00pld_lab;
 CREATE TABLE TBL_PATRIMONY (ssn TEXT, py_balance double, primary key (ssn));

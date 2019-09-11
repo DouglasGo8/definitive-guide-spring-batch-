@@ -1,8 +1,10 @@
 package com.bank.fixedlength.cassandra;
 
 
+import com.bank.fixedlength.cassandra.batch.JobListener;
 import com.bank.fixedlength.cassandra.batch.PatrimonyRepository;
 import com.bank.fixedlength.cassandra.domain.Patrimony;
+import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -10,11 +12,13 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.batch.core.listener.JobListenerFactoryBean;
 import org.springframework.batch.item.data.RepositoryItemWriter;
 import org.springframework.batch.item.data.builder.RepositoryItemWriterBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.transform.Range;
+import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -31,15 +35,14 @@ import javax.sql.DataSource;
  */
 @EnableBatchProcessing
 @SpringBootApplication
-@EnableCassandraRepositories(basePackageClasses = Patrimony.class)
 public class FixedLengthTKEJApplication {
 
 
     @Autowired
-    private JobBuilderFactory job;
+    private JobBuilderFactory jobBuilderFactory;
 
     @Autowired
-    private StepBuilderFactory step;
+    private StepBuilderFactory stepBuilderFactory;
 
 
     @Bean
@@ -55,6 +58,8 @@ public class FixedLengthTKEJApplication {
                 .build();
     }
 
+
+
     @Bean
     public RepositoryItemWriter writer(final PatrimonyRepository repo) {
 
@@ -66,7 +71,7 @@ public class FixedLengthTKEJApplication {
 
     @Bean
     public Step copyFixedLengthFile() {
-        return this.step.get("copyFixedLengthFile")
+        return this.stepBuilderFactory.get("copyFixedLengthFile")
                 .<Patrimony, Patrimony>chunk(50)
                 .reader(reader(null))
                 .writer(this.writer(null))
@@ -75,10 +80,12 @@ public class FixedLengthTKEJApplication {
 
     @Bean
     public Job job() {
-        return this.job.get("fixedLengthTKEJJob")
+        return this.jobBuilderFactory.get("fixedLengthTKEJJob")
                 .incrementer(new RunIdIncrementer())
                 .start(this.copyFixedLengthFile())
+                .listener(JobListenerFactoryBean.getListener(new JobListener()))
                 .build();
+
 
 
     }
