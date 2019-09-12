@@ -36,6 +36,10 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 07 - xmlFile parameters
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.xml
 
+# Chapter 07 - jsonFile parameters
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.json
+
+
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 

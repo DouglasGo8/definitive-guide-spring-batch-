@@ -39,6 +39,7 @@
         <module>definitive-guide-ch07-multiFileJob</module>
         <module>definitive-guide-ch07-xmlFileJob</module>
         <module>definitive-guide-bank-fixedLengthTKEJ</module>
+        <module>definitive-guide-ch07-jsonJob</module>
     </modules>
 
 
