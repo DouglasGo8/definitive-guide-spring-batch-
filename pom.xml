@@ -40,8 +40,8 @@
         <module>definitive-guide-ch07-xmlFileJob</module>
         <module>definitive-guide-bank-fixedLengthTKEJ</module>
         <module>definitive-guide-ch07-jsonJob</module>
+        <module>definitive-guide-ch07-jdbcCursor</module>
     </modules>
-
 
     <dependencies>
         <dependency>
