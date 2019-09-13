@@ -8,10 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.apress.springbatch.jdbc.cursor</groupId>
-    <artifactId>definitive-guide-ch07-jdbcCursor</artifactId>
+    <groupId>com.apress.springbatch.jdbc.paged.process</groupId>
+    <artifactId>definitive-guide-ch07-jdbcPagedProcessing</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Definitive :: Guide :: Ch07 :: Jdbc Paged Processing</name>
 
 
     <properties>

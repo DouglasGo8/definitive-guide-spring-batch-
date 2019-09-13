@@ -1,4 +1,4 @@
-package com.apress.springbatch.jdbccursor.domain;
+package com.apress.springbatch.jdbc.paged.process.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

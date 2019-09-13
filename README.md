@@ -39,6 +39,15 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 07 - jsonFile parameters
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.json
 
+# Chapter 07 - jdbcCursor parameters
+mvn spring-boot:run -D"spring-boot.run.arguments"=city=Gary
+
+# Chapter 07 - jdbcPagingProcessing parameters
+mvn spring-boot:run -D"spring-boot.run.arguments"=city=Gary
+
+# Chapter 07 - hibernateCursor
+mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
+
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 
