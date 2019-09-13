@@ -37,9 +37,8 @@ public class HibernateCursorApplication {
 
     @Bean
     @StepScope
-    public HibernateCursorItemReader<Customer>
-    hibernateCustomerItemReader(EntityManagerFactory entityManagerFactory,
-                                @Value("#{jobParameters['city']}") String city) {
+    public HibernateCursorItemReader<Customer> hibernateCustomerItemReader(EntityManagerFactory entityManagerFactory,
+                                                                           @Value("#{jobParameters['city']}") String city) {
         return new HibernateCursorItemReaderBuilder<Customer>()
                 .name("hibernateCustomerItemReader")
                 .sessionFactory(entityManagerFactory.unwrap(SessionFactory.class))

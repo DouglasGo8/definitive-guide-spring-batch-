@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -40,10 +41,9 @@
         <module>definitive-guide-bank-fixedLengthTKEJ</module>
         <module>definitive-guide-ch07-jsonJob</module>
         <module>definitive-guide-ch07-jdbcCursor</module>
-
-    <module>definitive-guide-ch07-jdbcPagedProcessing</module>
-  <module>definitive-guide-ch07-hibernateCursorJob</module>
-  </modules>
+        <module>definitive-guide-ch07-jdbcPagedProcessing</module>
+        <module>definitive-guide-ch07-hibernateCursorJob</module>
+    </modules>
 
     <dependencies>
         <dependency>

@@ -10,10 +10,6 @@ CREATE TABLE TBL_CUSTOMER (
     zipCode         TEXT NOT NULL
 );
 
-
-call public.customer_list('Stamford', 'resultSet');
-fetch all in "resultSet";
-
 CREATE OR REPLACE PROCEDURE customer_list(IN cityOption CHAR(16), inout result refcursor)
 LANGUAGE 'plpgsql'
 AS $BODY$
@@ -34,6 +30,8 @@ END;
 $BODY$;
 
 
+call public.customer_list('Stamford', 'resultSet');
+fetch all in "resultSet";
 
 
 INSERT INTO tbl_customer (id,firstName,middleInitial,lastName,address,city,state,zipCode) VALUES (1,'Melinda','A','Frank','P.O. Box 290, 520 Hendrerit. Ave','Juneau','AK','99658');
