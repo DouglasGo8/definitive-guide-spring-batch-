@@ -48,6 +48,8 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=city=Gary
 # Chapter 07 - hibernateCursor
 mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
 
+# Chapter 07 - hibernatePagedProcessing parameters
+
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 
