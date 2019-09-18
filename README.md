@@ -49,6 +49,13 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=city=Gary
 mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
 
 # Chapter 07 - hibernatePagedProcessing parameters
+mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
+
+# Chapter 07 - jpaJob parameters
+mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
+
+# Chapter 07 - storedProcedureJob parameters
+mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
 
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
@@ -58,11 +65,3 @@ mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-
 truncate table batch_job_execution cascade;
 truncate table batch_step_execution cascade;
 truncate table batch_job_instance cascade;
-
-
-# Keyspace
-CREATE KEYSPACE aq00pld_lab WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 1 };
-
-#
-use aq00pld_lab;
-CREATE TABLE TBL_PATRIMONY (ssn TEXT, py_balance double, primary key (ssn));

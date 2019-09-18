@@ -44,6 +44,8 @@
         <module>definitive-guide-ch07-jdbcPagedProcessing</module>
         <module>definitive-guide-ch07-hibernateCursorJob</module>
         <module>definitive-guide-ch07-hibernatePagedProcessing</module>
+        <module>definitive-guide-ch07-jpaJob</module>
+        <module>definitive-guide-ch07-storedProcedureJob</module>
     </modules>
 
     <dependencies>
