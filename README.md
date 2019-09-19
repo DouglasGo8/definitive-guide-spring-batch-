@@ -57,6 +57,9 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
 # Chapter 07 - storedProcedureJob parameters
 mvn spring-boot:run -D"spring-boot.run.arguments"=city=Chicago
 
+# Chapter 07 - mongoJob parameters
+mvn spring-boot:run -D"spring-boot.run.arguments"=id_str=54640519019642881
+
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 
