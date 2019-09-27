@@ -47,6 +47,8 @@
         <module>definitive-guide-ch07-jpaJob</module>
         <module>definitive-guide-ch07-storedProcedureJob</module>
         <module>definitive-guide-ch07-mongoDbJob</module>
+        <module>definitive-guide-ch07-springDataRepository</module>
+        <module>definitive-guide-ch07-existingService</module>
     </modules>
 
     <dependencies>
