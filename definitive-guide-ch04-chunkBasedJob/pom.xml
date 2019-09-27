@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.apress.springbatch.chunkbased</groupId>
     <artifactId>definitive-guide-ch04-chunkBasedJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch04-chunkBasedJob</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch04 :: Chunk Based</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
