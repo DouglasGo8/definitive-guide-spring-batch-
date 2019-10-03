@@ -5,6 +5,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/springbatch
     username: guest
     password: welcome1
+  data:
+    neo4j:
+      username: admin
+      password: admin
+
 
   batch:
     initialize-schema: always
