@@ -12,7 +12,7 @@
     <artifactId>definitive-guide-ch04-callableTaskletAdapterJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Definitive :: Guide :: Ch04 :: Callable Tasklet Adapter Job</name>
+    <name>Definitive :: Guide :: Ch04 :: Callable Tasklet Adapter</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

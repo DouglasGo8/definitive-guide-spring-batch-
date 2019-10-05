@@ -8,17 +8,22 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.apress.springbatch.methodinvokingtasklet</groupId>
-    <artifactId>definitive-guide-ch04-methodInvokingTaskletJob</artifactId>
+    <groupId>com.apress.springbatch.classifier.composite.item.processor</groupId>
+    <artifactId>definitive-guide-ch08-classifierCompositeItemProcessorJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Definitive :: Guide :: Ch04 :: Method Invoke Tasklet</name>
+    <name>Definitive :: Guide :: Ch08 :: Classifier Composite Item :: Processor</name>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -63,10 +68,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

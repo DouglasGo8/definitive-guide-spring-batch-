@@ -69,6 +69,12 @@ mvn spring-boot:run
 # Chapter 07 - customInput
 mvn spring-boot:run
 
+# Chapter 08 - classifierCompositeItemProcessor
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,script=file:./src/main/resources/input/lowerCase.js
+
+
+
+
 
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
