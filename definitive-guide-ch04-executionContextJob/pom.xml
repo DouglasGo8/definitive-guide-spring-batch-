@@ -12,8 +12,7 @@
     <artifactId>definitive-guide-ch04-executionContextJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch04-executionContextJob</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch04 :: Execution Context</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

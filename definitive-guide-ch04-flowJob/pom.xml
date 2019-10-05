@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.apress.springbatch.flow</groupId>
     <artifactId>definitive-guide-ch04-flowJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch04-flowJob</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch04 :: Flow</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

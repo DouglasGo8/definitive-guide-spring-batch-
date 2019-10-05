@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.apress.springbatch.helloworld</groupId>
     <artifactId>definitive-guide-ch04-helloWorldJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch04-helloWorldJob</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch04 :: HelloWorld</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
