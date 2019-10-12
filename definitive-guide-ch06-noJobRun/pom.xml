@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.apress.springbatch.jobrepository</groupId>
     <artifactId>definitive-guide-ch06-noJobRun</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch06-noJobRun</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch06 :: noRun</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

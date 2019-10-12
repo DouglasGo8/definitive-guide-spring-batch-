@@ -8,12 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-
+    <groupId>com.apress.springbatch.schedule.transaction.process</groupId>
     <artifactId>definitive-guide-ch06-transactionProcessingJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch06-transactionProcessingJob</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch06 :: Transaction Processing</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.apress.springbatch.jobrepository.metadata</groupId>
     <artifactId>definitive-guide-ch05-jobRepositoryMetadata</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch05-jobRepositoryMetadata</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch05 :: Repository Metadata</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

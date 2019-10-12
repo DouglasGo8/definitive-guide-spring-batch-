@@ -56,7 +56,8 @@
         <module>definitive-guide-ch07-customInputJob</module>
         <module>definitive-guide-ch07-neo4jJob</module>
         <module>definitive-guide-ch08-classifierCompositeItemProcessorJob</module>
-
+        <module>definitive-guide-ch08-compositeItemProcessorJob</module>
+        <module>definitive-guide-ch08-customItemProcessorJob</module>
     </modules>
 
     <dependencies>

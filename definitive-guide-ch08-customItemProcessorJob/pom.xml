@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>definitive-guide-spring-batch</artifactId>
-        <groupId>com.apress.springbatch</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+    <artifactId>definitive-guide-spring-batch</artifactId>
+    <groupId>com.apress.springbatch</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 
-    <groupId>com.apress.springbatch.schedule.quartz</groupId>
-    <artifactId>definitive-guide-ch06-scheduleQuartz</artifactId>
+    <groupId>com.apress.springbatch.custom.item.processor</groupId>
+    <artifactId>definitive-guide-ch08-customItemProcessorJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Definitive :: Guide :: Ch06 :: Schedule Quartz</name>
+    <name>Definitive :: Guide :: Ch08 :: Custom Item :: Processor</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

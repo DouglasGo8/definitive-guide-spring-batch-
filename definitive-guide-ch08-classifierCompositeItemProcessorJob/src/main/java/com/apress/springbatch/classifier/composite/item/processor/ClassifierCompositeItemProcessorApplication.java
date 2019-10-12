@@ -30,7 +30,7 @@ import static java.lang.System.out;
  */
 @EnableBatchProcessing
 @SpringBootApplication
-public class ClassifierCompositeItemProcessorApp {
+public class ClassifierCompositeItemProcessorApplication {
 
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
@@ -121,6 +121,6 @@ public class ClassifierCompositeItemProcessorApp {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ClassifierCompositeItemProcessorApp.class, args);
+        SpringApplication.run(ClassifierCompositeItemProcessorApplication.class, args);
     }
 }

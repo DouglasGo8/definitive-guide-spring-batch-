@@ -8,11 +8,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+
+    <groupId>com.apress.springbatch.launchjobrest</groupId>
     <artifactId>definitive-guide-ch06-launchJobRest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>definitive-guide-ch06-launchJobRest</name>
-    <description>Add project description here</description>
+    <name>Definitive :: Guide :: Ch06 :: Launch Rest</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
