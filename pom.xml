@@ -21,7 +21,6 @@
     <name>Definitive :: Guide :: Spring :: Batch</name>
 
     <modules>
-
         <module>definitive-guide-ch04-helloWorldJob</module>
         <module>definitive-guide-ch04-executionContextJob</module>
         <module>definitive-guide-ch04-callableTaskletAdapterJob</module>
@@ -58,16 +57,23 @@
         <module>definitive-guide-ch08-classifierCompositeItemProcessorJob</module>
         <module>definitive-guide-ch08-compositeItemProcessorJob</module>
         <module>definitive-guide-ch08-customItemProcessorJob</module>
+        <module>definitive-guide-ch08-itemProcessorAdapterJob</module>
+        <module>definitive-guide-ch08-scriptItemProcessorJob</module>
+        <module>definitive-guide-ch08-validationJob</module>
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-batch</artifactId>
         </dependency>
 
         <dependency>
-
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>

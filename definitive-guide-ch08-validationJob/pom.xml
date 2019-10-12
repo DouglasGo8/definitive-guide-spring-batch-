@@ -8,18 +8,17 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.apress.springbatch.composite.item.processor</groupId>
-    <artifactId>definitive-guide-ch08-compositeItemProcessorJob</artifactId>
+    <groupId>com.apress.springbatch.validation.processor</groupId>
+    <artifactId>definitive-guide-ch08-validationJob</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Definitive :: Guide :: Ch08 :: Composite Item :: Processor</name>
+    <name>Definitive :: Guide :: Ch08 :: Validation :: Processor</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
