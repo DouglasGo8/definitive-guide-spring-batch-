@@ -90,6 +90,9 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - formattedTextLine
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/formattedCustomer.txt
 
+# Chapter 09 - delimitedFile
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/delimitedCustomers.txt
+
 
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-

@@ -1,0 +1,15 @@
+58540;IL;St. Louis;5570 Isabella Ave;Darrow;Richard
+38635;CA;Houston;7844 S. Greenwood Ave;Donnelly;Barack
+55366;NY;Las Vegas;2447 S. Greenwood Ave;Benes;Ann
+04119;FL;Dallas;8177 4th Street;Minella;Laura
+57640;CA;Omaha;3141 Farnam Street;Gates;Erica
+94935;NY;St. Louis;4686 Mt. Lee Drive;Darrow;Warren
+37288;FL;Hollywood;6670 S. Greenwood Ave;Williams;Warren
+97261;FL;Houston;3273 Isabella Ave;Smith;Harry
+90520;WA;Las Vegas;8407 Infinite Loop Drive;James;Steve
+12778;IL;Miami;513 S. Greenwood Ave;Neuberger;Erica
+35928;AL;Mobile;7341 Vel Avenue;Hoover;Aimee
+57321;MN;Saint Paul;8852 In St.;Gilbert;Jonas
+33193;MS;Gulfport;4851 Nec Av.;Darrow;Regan
+18562;ID;Nampa;5529 Orci Av.;Mckenzie;Stuart
+25606;KS;Olathe;894 Ornare. Ave;Robinson;Sydnee

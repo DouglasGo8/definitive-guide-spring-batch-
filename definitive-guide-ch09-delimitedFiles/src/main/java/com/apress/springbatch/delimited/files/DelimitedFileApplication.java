@@ -1,7 +1,6 @@
-package com.apress.springbatch.formatted.textfile;
+package com.apress.springbatch.delimited.files;
 
-
-import com.apress.springbatch.formatted.textfile.domain.Customer;
+import com.apress.springbatch.delimited.files.domain.Customer;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -12,8 +11,6 @@ import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.FlatFileItemWriter;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.builder.FlatFileItemWriterBuilder;
-import org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor;
-import org.springframework.batch.item.file.transform.FormatterLineAggregator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -21,26 +18,32 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
 
+
+/**
+ * @author dbatista
+ */
 @EnableBatchProcessing
 @SpringBootApplication
-public class FormattedTextFileApp {
+public class DelimitedFileApplication {
 
 
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
+
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
 
     @Bean
     @StepScope
-    public FlatFileItemReader<Customer> customerFileReader(@Value("#{jobParameters['customerFile']}")
-                                                                   Resource inputFile) {
+    public FlatFileItemReader<Customer> customerFileReader(
+            @Value("#{jobParameters['customerFile']}") Resource inputFile) {
         return new FlatFileItemReaderBuilder<Customer>()
                 .name("customerFileReader")
                 .resource(inputFile)
                 .delimited()
-                .names(new String[]{"firstName",
+                .names(new String[]{
+                        "firstName",
                         "middleInitial",
                         "lastName",
                         "address",
@@ -53,31 +56,27 @@ public class FormattedTextFileApp {
 
     @Bean
     @StepScope
-    public FlatFileItemWriter<Customer> customerItemWriter(@Value("#{jobParameters['outputFile']}")
-                                                                   Resource outputFile) {
-       /* BeanWrapperFieldExtractor<Customer> fieldExtractor = new BeanWrapperFieldExtractor<>();
-        fieldExtractor.setNames(new String[]{"firstName", "lastName", "address", "city", "state", "zip"});
-        fieldExtractor.afterPropertiesSet();
-
-        FormatterLineAggregator<Customer> lineAggregator = new FormatterLineAggregator<>();
-
-        lineAggregator.setFieldExtractor(fieldExtractor);
-        lineAggregator.setFormat("%s %s lives at %s %s in %s, %s.");*/
-
+    public FlatFileItemWriter<Customer> customerItemWriter(
+            @Value("#{jobParameters['outputFile']}") Resource outputFile) {
         return new FlatFileItemWriterBuilder<Customer>()
                 .name("customerItemWriter")
                 .resource(outputFile)
-                .formatted()
-                .format("%s %s lives at %s %s in %s, %s.")
-                .names(new String[]{"firstName", "lastName", "address", "city", "state", "zip"})
-               // .lineAggregator(lineAggregator)
+                .delimited()
+                .delimiter(";")
+                .names(new String[]{"zip",
+                        "state",
+                        "city",
+                        "address",
+                        "lastName",
+                        "firstName"})
+                .append(true)
                 .build();
     }
 
     @Bean
-    public Step formatStep() {
+    public Step delimitedStep() {
         return this.stepBuilderFactory
-                .get("formatStep")
+                .get("delimitedStep")
                 .<Customer, Customer>chunk(10)
                 .reader(this.customerFileReader(null))
                 .writer(this.customerItemWriter(null))
@@ -85,15 +84,17 @@ public class FormattedTextFileApp {
     }
 
     @Bean
-    public Job formatJob() {
+    public Job delimitedJob() {
         return this.jobBuilderFactory
-                .get("formatJob")
-                .start(this.formatStep())
+                .get("delimitedJob")
+                .start(this.delimitedStep())
                 .build();
     }
 
+
     public static void main(String[] args) {
-        SpringApplication.run(FormattedTextFileApp.class, args);
+        SpringApplication.run(DelimitedFileApplication.class, args);
     }
+
 
 }

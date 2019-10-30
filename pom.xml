@@ -61,6 +61,7 @@
         <module>definitive-guide-ch08-scriptItemProcessorJob</module>
         <module>definitive-guide-ch08-validationJob</module>
         <module>definitive-guide-ch09-formattedTextFileJob</module>
+        <module>definitive-guide-ch09-delimitedFiles</module>
     </modules>
 
     <dependencies>
