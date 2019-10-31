@@ -69,7 +69,8 @@ public class DelimitedFileApplication {
                         "address",
                         "lastName",
                         "firstName"})
-                .append(true)
+                //.append(true)
+                .shouldDeleteIfEmpty(true)
                 .build();
     }
 
