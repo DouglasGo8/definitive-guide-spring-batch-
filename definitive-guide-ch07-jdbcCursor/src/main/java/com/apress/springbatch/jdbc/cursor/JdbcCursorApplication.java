@@ -41,7 +41,7 @@ public class JdbcCursorApplication {
         return new JdbcCursorItemReaderBuilder<Customer>()
                 .name("customerJdbcReader")
                 .dataSource(dataSource)
-                .sql("SELECT * FROM TBL_CUSTOMER WHERE city = ?")
+                .sql("SELECT * FROM TBL_CUSTOMER_READER WHERE city = ?")
                 .rowMapper(new CustomerRowMapper())
                 .preparedStatementSetter(this.citySetter(null))
                 .build();

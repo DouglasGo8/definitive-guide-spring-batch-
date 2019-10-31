@@ -66,7 +66,7 @@ public class JdbcPagedProcessingApplication {
 
         factoryBean.setDataSource(dataSource);
         factoryBean.setSelectClause("select *");
-        factoryBean.setFromClause("from TBL_CUSTOMER");
+        factoryBean.setFromClause("from TBL_CUSTOMER_READER");
         factoryBean.setWhereClause("WHERE city = :city");
         factoryBean.setSortKey("lastName");
         return factoryBean;

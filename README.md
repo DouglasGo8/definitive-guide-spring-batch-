@@ -93,6 +93,16 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - delimitedFile
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/delimitedCustomers.txt
 
+# Chapter 09 - staxItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/customer.xml
+
+# Chapter 09 - jdbcBatchItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+
+# Chapter 09 - hibernateItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+
+
 
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
