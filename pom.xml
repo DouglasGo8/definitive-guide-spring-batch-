@@ -65,6 +65,8 @@
         <module>definitive-guide-ch09-staxItemWriter</module>
         <module>definitive-guide-ch09-jdbcBatchItemWriter</module>
         <module>definitive-guide-ch09-hibernateItemWriter</module>
+        <module>definitive-guide-ch09-jpaBatchItemWriter</module>
+        <module>definitive-guide-ch09-mongoDbItemWriter</module>
     </modules>
 
     <dependencies>

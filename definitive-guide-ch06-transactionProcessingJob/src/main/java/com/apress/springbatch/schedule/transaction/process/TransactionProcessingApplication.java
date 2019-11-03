@@ -1,11 +1,11 @@
 package com.apress.springbatch.schedule.transaction.process;
 
-import com.apress.springbatch.schedule.transaction.process.batch.TransactionApplierProcessor;
 import com.apress.springbatch.schedule.transaction.process.batch.TransactionReader;
 import com.apress.springbatch.schedule.transaction.process.domain.AccountSummary;
 import com.apress.springbatch.schedule.transaction.process.domain.Transaction;
 import com.apress.springbatch.schedule.transaction.process.infrastructure.database.TransactionDao;
 import com.apress.springbatch.schedule.transaction.process.infrastructure.database.impl.TransactionDaoImpl;
+import com.apress.springbatch.schedule.transaction.process.batch.TransactionApplierProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

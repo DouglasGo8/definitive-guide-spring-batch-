@@ -2,7 +2,7 @@ version: '3'
 services:
   mongodb-burger:
     image: mongo
-    container_name: "mongodb-tweets"
+    container_name: "mongodb"
     environment:
       - MONGO_INITDB_DATABASE=tweets-db
       - MONGO_INITDB_ROOT_USERNAME=guest

@@ -4,6 +4,9 @@
 # Command Line
 # Win
 mvn spring-boot:run -D"spring-boot.run.arguments"=name=Douglas
+# Maven archetype
+mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
+
 
 # fixedLengthTKEJ
 mvn spring-boot:run -D"spring-boot.run.arguments"=patrimonyFile=file:./src/main/resources/input/patrimony.dat 
@@ -99,16 +102,11 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - jdbcBatchItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
-# Chapter 09 - hibernateItemWriter
+# Chapter 09 - hibernateBatchItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
+# Chapter 09 - jpaBatchItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
-
-# Maven archetype
-mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
-
-# clean tables without jobIdIncrementer
-
-truncate table batch_job_execution cascade;
-truncate table batch_step_execution cascade;
-truncate table batch_job_instance cascade;
+# Chapter 09 - mongoDbItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv

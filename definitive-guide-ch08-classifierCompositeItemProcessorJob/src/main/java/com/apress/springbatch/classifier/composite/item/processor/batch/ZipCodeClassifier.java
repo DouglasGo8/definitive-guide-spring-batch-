@@ -2,7 +2,6 @@ package com.apress.springbatch.classifier.composite.item.processor.batch;
 
 import com.apress.springbatch.classifier.composite.item.processor.domain.Customer;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.classify.Classifier;
 
