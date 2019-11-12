@@ -4,7 +4,6 @@ package com.bank.fixedlength.cassandra;
 import com.bank.fixedlength.cassandra.batch.JobListener;
 import com.bank.fixedlength.cassandra.batch.PatrimonyRepository;
 import com.bank.fixedlength.cassandra.domain.Patrimony;
-import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -18,17 +17,12 @@ import org.springframework.batch.item.data.builder.RepositoryItemWriterBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.transform.Range;
-import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
-import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
-
-import javax.sql.DataSource;
 
 /**
  * @author dbatista

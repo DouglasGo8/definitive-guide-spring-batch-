@@ -37,6 +37,7 @@ public class JdbcCursorApplication {
     private StepBuilderFactory stepBuilderFactory;
 
     @Bean
+    @StepScope
     public JdbcCursorItemReader<Customer> customerJdbcReader(DataSource dataSource) {
         return new JdbcCursorItemReaderBuilder<Customer>()
                 .name("customerJdbcReader")

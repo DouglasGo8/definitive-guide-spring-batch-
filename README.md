@@ -1,6 +1,9 @@
 # Github
 <https://github.com/Apress/def-guide-spring-batch />
 
+# Cassandra Docker
+<https://gokhanatil.com/2018/02/build-a-cassandra-cluster-on-docker.html />
+
 # Command Line
 # Win
 mvn spring-boot:run -D"spring-boot.run.arguments"=name=Douglas
@@ -100,8 +103,7 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
 # Chapter 09 - hibernateItemWriter
-mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
-
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.cs
 
 
 # Maven archetype
@@ -112,3 +114,7 @@ mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-
 truncate table batch_job_execution cascade;
 truncate table batch_step_execution cascade;
 truncate table batch_job_instance cascade;
+
+# Cassandra Docker command Line
+
+docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
