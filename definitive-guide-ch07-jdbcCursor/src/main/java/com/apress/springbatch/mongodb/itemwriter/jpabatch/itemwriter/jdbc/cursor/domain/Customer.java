@@ -1,0 +1,41 @@
+package com.apress.springbatch.mongodb.itemwriter.jpabatch.itemwriter.jdbc.cursor.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * @author dbatista
+ */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Customer {
+
+    private Long id;
+
+    private String city;
+    private String state;
+    private String zipCode;
+    private String address;
+
+    private String lastName;
+    private String firstName;
+    private String middleInitial;
+
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", middleInitial='" + middleInitial + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
+
+    }
+
+}

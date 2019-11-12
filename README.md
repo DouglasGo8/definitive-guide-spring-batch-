@@ -7,6 +7,9 @@
 # Command Line
 # Win
 mvn spring-boot:run -D"spring-boot.run.arguments"=name=Douglas
+# Maven archetype
+mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
+
 
 # fixedLengthTKEJ
 mvn spring-boot:run -D"spring-boot.run.arguments"=patrimonyFile=file:./src/main/resources/input/patrimony.dat 
@@ -102,6 +105,7 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - jdbcBatchItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
+<<<<<<< HEAD
 # Chapter 09 - hibernateItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.cs
 
@@ -118,3 +122,13 @@ truncate table batch_job_instance cascade;
 # Cassandra Docker command Line
 
 docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
+=======
+# Chapter 09 - hibernateBatchItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+
+# Chapter 09 - jpaBatchItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+
+# Chapter 09 - mongoDbItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+>>>>>>> dcd18c8557b3836590c305c0334b94e7e5b56b48
