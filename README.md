@@ -105,7 +105,6 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - jdbcBatchItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
-<<<<<<< HEAD
 # Chapter 09 - hibernateItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.cs
 
@@ -131,4 +130,4 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 
 # Chapter 09 - mongoDbItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
->>>>>>> dcd18c8557b3836590c305c0334b94e7e5b56b48
+
