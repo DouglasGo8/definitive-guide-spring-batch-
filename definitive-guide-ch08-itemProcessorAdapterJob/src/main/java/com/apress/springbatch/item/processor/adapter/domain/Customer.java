@@ -1,4 +1,4 @@
-package com.apress.springbatch.jpabatch.itemwriter.item.processor.adapter.domain;
+package com.apress.springbatch.item.processor.adapter.domain;
 
 
 import lombok.Data;

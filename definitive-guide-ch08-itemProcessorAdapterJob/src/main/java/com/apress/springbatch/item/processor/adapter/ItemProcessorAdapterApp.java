@@ -1,7 +1,7 @@
-package com.apress.springbatch.jpabatch.itemwriter.item.processor.adapter;
+package com.apress.springbatch.item.processor.adapter;
 
-import com.apress.springbatch.jpabatch.itemwriter.item.processor.adapter.domain.Customer;
-import com.apress.springbatch.jpabatch.itemwriter.item.processor.adapter.service.UpperCaseNameService;
+import com.apress.springbatch.item.processor.adapter.domain.Customer;
+import com.apress.springbatch.item.processor.adapter.service.UpperCaseNameService;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

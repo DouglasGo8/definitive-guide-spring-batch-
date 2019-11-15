@@ -1,0 +1,42 @@
+spring:
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/springbatch
+    username: guest
+    password: welcome1
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
+  jms:
+    listener:
+      acknowledge-mode: auto
+      auto-startup: true
+    pub-sub-domain: false
+    template:
+      default-destination:
+      delivery-mode: non_persistent
+      priority: 100
+      qos-enabled: true
+
+  activemq:
+    packages:
+      trust-all: true
+    broker-url: tcp://localhost:61616
+    non-blocking-redelivery: true
+
+  batch:
+    initialize-schema: always
+
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: ERROR

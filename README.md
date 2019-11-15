@@ -10,7 +10,6 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=name=Douglas
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 
-
 # fixedLengthTKEJ
 mvn spring-boot:run -D"spring-boot.run.arguments"=patrimonyFile=file:./src/main/resources/input/patrimony.dat 
 java -jar .\target\definitive-guide-bank-fixedLengthTKEJ-1.0-SNAPSHOT.jar patrimonyFile=file:./src/main/resources/input/patrimony.dat 
@@ -117,9 +116,9 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - propertyExtract
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
+# Chapter 09 - jmsItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/customer.xml
 
-# Maven archetype
-mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 
 # clean tables without jobIdIncrementer
 
@@ -130,7 +129,7 @@ truncate table batch_job_instance cascade;
 # Cassandra Docker command Line
 
 docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
-=======
+
 # Chapter 09 - hibernateBatchItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 

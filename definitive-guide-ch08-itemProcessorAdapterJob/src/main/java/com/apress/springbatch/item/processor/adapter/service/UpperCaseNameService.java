@@ -1,7 +1,7 @@
-package com.apress.springbatch.jpabatch.itemwriter.item.processor.adapter.service;
+package com.apress.springbatch.item.processor.adapter.service;
 
 
-import com.apress.springbatch.jpabatch.itemwriter.item.processor.adapter.domain.Customer;
+import com.apress.springbatch.item.processor.adapter.domain.Customer;
 import org.springframework.stereotype.Service;
 
 @Service

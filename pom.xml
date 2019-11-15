@@ -69,6 +69,7 @@
         <module>definitive-guide-ch09-repositoryImportJob</module>
         <module>definitive-guide-ch09-itemWriterAdapterJob</module>
         <module>definitive-guide-ch09-propertyExtractingJob</module>
+        <module>definitive-guide-ch09-jmsItemWriter</module>
     </modules>
 
     <dependencies>
