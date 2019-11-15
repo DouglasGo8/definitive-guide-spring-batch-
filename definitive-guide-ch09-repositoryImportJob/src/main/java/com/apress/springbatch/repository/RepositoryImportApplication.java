@@ -35,7 +35,6 @@ public class RepositoryImportApplication {
     @Autowired
     private  StepBuilderFactory stepBuilderFactory;
 
-
     @Bean
     @StepScope
     public FlatFileItemReader<Customer> customerFileReader(@Value("#{jobParameters['customerFile']}")
@@ -47,6 +46,7 @@ public class RepositoryImportApplication {
                 .names(new String[]{"firstName",
                         "middleInitial",
                         "lastName",
+                        "address",
                         "city",
                         "state",
                         "zip"})
