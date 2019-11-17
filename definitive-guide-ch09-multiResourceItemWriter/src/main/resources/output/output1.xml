@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+    <identification>
+        <author name="Michael Minella"></author>
+    </identification>
+    <customer>
+        <id>1</id>
+        <firstName>Melinda</firstName>
+        <middleInitial>A</middleInitial>
+        <lastName>Frank</lastName>
+        <address>P.O. Box 290, 520 Hendrerit. Ave</address>
+        <city>Juneau</city>
+        <state>AK</state>
+    </customer>
+    <customer>
+        <id>2</id>
+        <firstName>Stone</firstName>
+        <middleInitial>B</middleInitial>
+        <lastName>Todd</lastName>
+        <address>Ap #365-6856 Vestibulum. St.</address>
+        <city>Gary</city>
+        <state>IN</state>
+    </customer>
+    <customer>
+        <id>3</id>
+        <firstName>Aileen</firstName>
+        <middleInitial>C</middleInitial>
+        <lastName>Hoffman</lastName>
+        <address>411-6828 Eu St.</address>
+        <city>Stamford</city>
+        <state>CT</state>
+    </customer>
+    <customer>
+        <id>4</id>
+        <firstName>Jared</firstName>
+        <middleInitial>D</middleInitial>
+        <lastName>Bean</lastName>
+        <address>7638 Nulla. Rd.</address>
+        <city>Tuscaloosa</city>
+        <state>AL</state>
+    </customer>
+    <customer>
+        <id>5</id>
+        <firstName>Igor</firstName>
+        <middleInitial>E</middleInitial>
+        <lastName>Young</lastName>
+        <address>Ap #296-2433 Diam. Av.</address>
+        <city>Norman</city>
+        <state>OK</state>
+    </customer>
+    <customer>
+        <id>6</id>
+        <firstName>Nita</firstName>
+        <middleInitial>F</middleInitial>
+        <lastName>Mcleod</lastName>
+        <address>Ap #853-7502 Magna Rd.</address>
+        <city>Davenport</city>
+        <state>IA</state>
+    </customer>
+    <customer>
+        <id>7</id>
+        <firstName>TaShya</firstName>
+        <middleInitial>G</middleInitial>
+        <lastName>Hayes</lastName>
+        <address>Ap #273-9873 Consectetuer Rd.</address>
+        <city>Sandy</city>
+        <state>UT</state>
+    </customer>
+    <customer>
+        <id>8</id>
+        <firstName>Benedict</firstName>
+        <middleInitial>H</middleInitial>
+        <lastName>Maddox</lastName>
+        <address>P.O. Box 859, 564 Interdum Av.</address>
+        <city>Frederick</city>
+        <state>MD</state>
+    </customer>
+    <customer>
+        <id>9</id>
+        <firstName>Angelica</firstName>
+        <middleInitial>I</middleInitial>
+        <lastName>Hayden</lastName>
+        <address>P.O. Box 150, 5799 A Rd.</address>
+        <city>Jackson</city>
+        <state>MS</state>
+    </customer>
+    <customer>
+        <id>10</id>
+        <firstName>Violet</firstName>
+        <middleInitial>J</middleInitial>
+        <lastName>Stone</lastName>
+        <address>3154 Posuere Ave</address>
+        <city>Hartford</city>
+        <state>CT</state>
+    </customer>
+    <customer>
+        <id>11</id>
+        <firstName>Ariana</firstName>
+        <middleInitial>K</middleInitial>
+        <lastName>Peck</lastName>
+        <address>8172 Cursus Avenue</address>
+        <city>Bloomington</city>
+        <state>MN</state>
+    </customer>
+    <customer>
+        <id>12</id>
+        <firstName>Lester</firstName>
+        <middleInitial>L</middleInitial>
+        <lastName>Chavez</lastName>
+        <address>2842 Sit St.</address>
+        <city>Cincinnati</city>
+        <state>OH</state>
+    </customer>
+    <customer>
+        <id>13</id>
+        <firstName>Malcolm</firstName>
+        <middleInitial>M</middleInitial>
+        <lastName>Baker</lastName>
+        <address>Ap #277-7207 Vitae Ave</address>
+        <city>Warren</city>
+        <state>MI</state>
+    </customer>
+    <customer>
+        <id>14</id>
+        <firstName>Finn</firstName>
+        <middleInitial>N</middleInitial>
+        <lastName>Dean</lastName>
+        <address>9966 Dis St.</address>
+        <city>Frankfort</city>
+        <state>KY</state>
+    </customer>
+    <customer>
+        <id>15</id>
+        <firstName>Evangeline</firstName>
+        <middleInitial>O</middleInitial>
+        <lastName>Roberts</lastName>
+        <address>P.O. Box 359, 5322 At, Rd.</address>
+        <city>Lansing</city>
+        <state>MI</state>
+    </customer>
+    <customer>
+        <id>16</id>
+        <firstName>Jillian</firstName>
+        <middleInitial>P</middleInitial>
+        <lastName>Dean</lastName>
+        <address>Ap #498-4258 Interdum. St.</address>
+        <city>Bear</city>
+        <state>DE</state>
+    </customer>
+    <customer>
+        <id>17</id>
+        <firstName>Merrill</firstName>
+        <middleInitial>Q</middleInitial>
+        <lastName>Dean</lastName>
+        <address>Ap #231-2346 Sem, St.</address>
+        <city>Philadelphia</city>
+        <state>PA</state>
+    </customer>
+    <customer>
+        <id>18</id>
+        <firstName>Halee</firstName>
+        <middleInitial>R</middleInitial>
+        <lastName>Sloan</lastName>
+        <address>104-1046 Sed St.</address>
+        <city>Pocatello</city>
+        <state>ID</state>
+    </customer>
+    <customer>
+        <id>19</id>
+        <firstName>Ashely</firstName>
+        <middleInitial>S</middleInitial>
+        <lastName>Santiago</lastName>
+        <address>Ap #968-8051 Nascetur Av.</address>
+        <city>Jonesboro</city>
+        <state>AR</state>
+    </customer>
+    <customer>
+        <id>20</id>
+        <firstName>Jasper</firstName>
+        <middleInitial>T</middleInitial>
+        <lastName>Burch</lastName>
+        <address>8042 Mauris St.</address>
+        <city>Honolulu</city>
+        <state>HI</state>
+    </customer>
+    <customer>
+        <id>21</id>
+        <firstName>Tate</firstName>
+        <middleInitial>U</middleInitial>
+        <lastName>Howell</lastName>
+        <address>2323 Est Rd.</address>
+        <city>Fresno</city>
+        <state>CA</state>
+    </customer>
+    <customer>
+        <id>22</id>
+        <firstName>Harriet</firstName>
+        <middleInitial>V</middleInitial>
+        <lastName>Bender</lastName>
+        <address>4219 In, Street</address>
+        <city>Huntsville</city>
+        <state>AL</state>
+    </customer>
+    <customer>
+        <id>23</id>
+        <firstName>Aspen</firstName>
+        <middleInitial>W</middleInitial>
+        <lastName>Blanchard</lastName>
+        <address>904-2126 At, St.</address>
+        <city>Covington</city>
+        <state>KY</state>
+    </customer>
+    <customer>
+        <id>24</id>
+        <firstName>Vernon</firstName>
+        <middleInitial>X</middleInitial>
+        <lastName>Bradford</lastName>
+        <address>P.O. Box 417, 2653 Faucibus Avenue</address>
+        <city>Salem</city>
+        <state>OR</state>
+    </customer>
+    <customer>
+        <id>25</id>
+        <firstName>Lunea</firstName>
+        <middleInitial>Y</middleInitial>
+        <lastName>Guzman</lastName>
+        <address>7280 Orci Rd.</address>
+        <city>Dover</city>
+        <state>DE</state>
+    </customer>
+    <customer>
+        <id>26</id>
+        <firstName>Galvin</firstName>
+        <middleInitial>Z</middleInitial>
+        <lastName>Jenkins</lastName>
+        <address>135-4988 Etiam Rd.</address>
+        <city>Anchorage</city>
+        <state>AK</state>
+    </customer>
+    <customer>
+        <id>27</id>
+        <firstName>Julie</firstName>
+        <middleInitial>A</middleInitial>
+        <lastName>Holmes</lastName>
+        <address>Ap #950-3128 Enim. Street</address>
+        <city>Gary</city>
+        <state>IN</state>
+    </customer>
+    <customer>
+        <id>28</id>
+        <firstName>Morgan</firstName>
+        <middleInitial>B</middleInitial>
+        <lastName>Rowe</lastName>
+        <address>696-1898 Nam Avenue</address>
+        <city>Gresham</city>
+        <state>OR</state>
+    </customer>
+    <customer>
+        <id>29</id>
+        <firstName>Phyllis</firstName>
+        <middleInitial>C</middleInitial>
+        <lastName>Stephens</lastName>
+        <address>Ap #516-7431 Ipsum. Av.</address>
+        <city>Tulsa</city>
+        <state>OK</state>
+    </customer>
+    <customer>
+        <id>30</id>
+        <firstName>Emerson</firstName>
+        <middleInitial>D</middleInitial>
+        <lastName>Goff</lastName>
+        <address>924-2031 In, St.</address>
+        <city>Chesapeake</city>
+        <state>VA</state>
+    </customer>
+</customers>
