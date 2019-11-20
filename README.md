@@ -122,10 +122,6 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 
 # clean tables without jobIdIncrementer
 
-truncate table batch_job_execution cascade;
-truncate table batch_step_execution cascade;
-truncate table batch_job_instance cascade;
-
 # Cassandra Docker command Line
 
 docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
