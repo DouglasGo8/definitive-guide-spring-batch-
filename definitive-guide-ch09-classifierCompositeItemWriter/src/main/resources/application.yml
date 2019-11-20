@@ -1,0 +1,17 @@
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/springbatch
+    username: guest
+    password: welcome1
+
+  batch:
+   initialize-schema: always
+
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: ERROR
