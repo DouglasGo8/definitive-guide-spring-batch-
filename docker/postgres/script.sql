@@ -19,7 +19,7 @@ CREATE TABLE TBL_CUSTOMER_WRITER (
 
 
 CREATE TABLE TBL_CUSTOMER_READER (
-    id              NUMERIC NOT NULL PRIMARY KEY,
+    id              SERIAL NOT NULL PRIMARY KEY,
     firstName       TEXT NOT NULL,
     middleInitial   TEXT NOT NULL,
     lastName        TEXT NOT NULL,

@@ -107,6 +107,15 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - hibernateItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
+# Chapter 09 - hibernateBatchItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+
+# Chapter 09 - jpaBatchItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+
+# Chapter 09 - mongoDbItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
+
 # Chapter 09 - repositoryImport
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
 
@@ -119,19 +128,15 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 # Chapter 09 - jmsItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/customer.xml
 
+# Chapter 09 - multiItemResource
+mvn spring-boot:run
+
+# Chapter 09 - multiItemResourceHeaderFooter
+mvn spring-boot:run
+
 
 # clean tables without jobIdIncrementer
 
 # Cassandra Docker command Line
 
 docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
-
-# Chapter 09 - hibernateBatchItemWriter
-mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
-
-# Chapter 09 - jpaBatchItemWriter
-mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
-
-# Chapter 09 - mongoDbItemWriter
-mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv
-
