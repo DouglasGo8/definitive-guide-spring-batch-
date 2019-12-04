@@ -14,4 +14,4 @@ logging:
     console: "%d %-5level %logger : %msg%n"
   level:
     org.springframework: INFO
-    org.hibernate: ERROR
+    org.hibernate: DEBUG

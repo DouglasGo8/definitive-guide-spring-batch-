@@ -134,6 +134,11 @@ mvn spring-boot:run
 # Chapter 09 - multiItemResourceHeaderFooter
 mvn spring-boot:run
 
+# Chapter 09 - compositeItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/customer.xml
+
+# Chatper 09 - classifierCompositeItemWriter
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/customer.xml
 
 # clean tables without jobIdIncrementer
 
