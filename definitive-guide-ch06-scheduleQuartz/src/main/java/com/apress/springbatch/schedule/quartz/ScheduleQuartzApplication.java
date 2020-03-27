@@ -1,6 +1,7 @@
 package com.apress.springbatch.schedule.quartz;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -8,7 +9,6 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.repeat.RepeatStatus;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -30,13 +30,11 @@ public class ScheduleQuartzApplication {
      *
      */
     @Configuration
-    public class BatchConfiguration {
+    @AllArgsConstructor
+    public static class BatchConfiguration {
 
-        @Autowired
-        private JobBuilderFactory job;
-
-        @Autowired
-        private StepBuilderFactory step;
+        private final JobBuilderFactory job;
+        private final StepBuilderFactory step;
 
         @Bean
         public Job job() {

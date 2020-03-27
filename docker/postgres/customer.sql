@@ -2,6 +2,7 @@
 DROP TABLE IF EXISTS TBL_CUSTOMER;
 
 CREATE TABLE TBL_CUSTOMER (
+    customer_id serial not null primary key,
     first_name text not null,
     middle_name text,
     last_name text not null,
@@ -15,7 +16,7 @@ CREATE TABLE TBL_CUSTOMER (
     home_phone text,
     cell_phone text,
     work_phone text,
-    notification_pref text
+    notification_pref SMALLINT NOT NULL
 );
 
 INSERT INTO TBL_CUSTOMER (first_name, middle_name, last_name, address1, address2, city, state, postal_code, ssn, email_address, home_phone, cell_phone, work_phone, notification_pref) VALUES ('Gibbie', 'Holmes', 'Peiro', '131 Killdeer Way', null, 'Hamilton', 'Ohio', '28815', '693-26-6169', 'hpeiro0@surveymonkey.com', null, '828-660-5816', '763-497-5789', 2);

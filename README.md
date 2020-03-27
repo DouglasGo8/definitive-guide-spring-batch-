@@ -7,6 +7,7 @@
 # Command Line
 # Win
 mvn spring-boot:run -D"spring-boot.run.arguments"=name=Douglas
+
 # Maven archetype
 mvn archetype:generate -DgroupId=com.apress.springbatch -DartifactId=definitive-guide-chXXX-
 
@@ -19,6 +20,9 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=fileName=file.csv
 
 # Chapter 06 - transactionProcessingJob parameters
 mvn spring-boot:run -D"spring-boot.run.arguments"=transactionFile=file:./src/main/resources/input/transactionFile.csv,summaryFile=file:./src/main/resources/output/summaryFile3.csv 
+
+# Chapter 06 - scheduleQuartz
+mvn spring-boot:run
 
 # Chapter 07 - fixedWithFiles parameters
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customerFixedWidth.dat
@@ -137,8 +141,13 @@ mvn spring-boot:run
 # Chapter 09 - compositeItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/customer.xml
 
-# Chatper 09 - classifierCompositeItemWriter
+# Chapter 09 - classifierCompositeItemWriter
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/resources/input/customer.csv,outputFile=file:./src/main/resources/output/customer.xml
+
+# Chapter 10 - sampleApp
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled.csv
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled_2.csv
+
 
 # clean tables without jobIdIncrementer
 
