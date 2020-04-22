@@ -58,8 +58,7 @@ public class StaxItemWriterApplication {
 
     @Bean
     @StepScope
-    public StaxEventItemWriter<Customer> xmlCustomerWriter(@Value("#{jobParameters['outputFile']}")
-                                                                       Resource outputFile) {
+    public StaxEventItemWriter<Customer> xmlCustomerWriter(@Value("#{jobParameters['outputFile']}") Resource outputFile) {
 
         final Map<String, Class> aliases = new HashMap<>();
 

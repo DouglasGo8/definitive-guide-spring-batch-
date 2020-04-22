@@ -1,7 +1,9 @@
 
-DROP TABLE TBL_TRANSACTION;
+DROP TABLE IF EXISTS TBL_TRANSACTION;
 
+-- run sampleJob
 CREATE TABLE TBL_TRANSACTION (
+    transaction_id integer not null primary key,
     account_account_id integer not null,
     description text,
     credit decimal,
@@ -9,6 +11,17 @@ CREATE TABLE TBL_TRANSACTION (
     timestamp timestamp
 );
 
+-- run Tests
+CREATE TABLE TBL_TRANSACTION (
+    transaction_id serial not null primary key,
+    account_account_id integer not null,
+    description text,
+    credit decimal,
+    debit decimal,
+    timestamp timestamp
+);
+
+--
 INSERT INTO TBL_TRANSACTION (account_account_id, description, credit, debit, timestamp) VALUES (505, 'Linklinks', null, -1140, '2018-06-06 19:52:42');
 INSERT INTO TBL_TRANSACTION (account_account_id, description, credit, debit, timestamp) VALUES (652, 'Jaxworks', null, -1807, '2018-06-04 14:34:25');
 INSERT INTO TBL_TRANSACTION (account_account_id, description, credit, debit, timestamp) VALUES (550, 'Divavu', null, -2739, '2018-06-01 03:53:17');

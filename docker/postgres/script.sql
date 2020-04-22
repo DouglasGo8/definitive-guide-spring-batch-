@@ -6,6 +6,29 @@ TRUNCATE TABLE batch_job_execution cascade;
 TRUNCATE TABLE batch_step_execution cascade;
 
 
+
+select a.account_id,
+       a.balance,
+       a.last_statement_date,
+       t.transaction_id,
+       t.description,
+       t.credit,
+       t.debit,
+       t.timestamp
+from tbl_account a left join
+     tbl_transaction t on a.account_id = t.account_account_id
+
+where a.account_id in
+
+      (select account_account_id
+       from tbl_customer_account
+       where customer_customer_id = 405)
+order by t.timestamp
+
+
+select * from tbl_customer_account
+
+
 CREATE TABLE TBL_CUSTOMER_WRITER (
     id              SERIAL NOT NULL PRIMARY KEY,
     firstName       TEXT NOT NULL,

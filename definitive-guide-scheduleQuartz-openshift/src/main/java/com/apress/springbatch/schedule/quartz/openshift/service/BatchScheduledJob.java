@@ -17,10 +17,8 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
 public class BatchScheduledJob extends QuartzJobBean {
 
     private final Job job;
-
-    private final JobExplorer jobExplorer;
-
     private final JobLauncher jobLauncher;
+    private final JobExplorer jobExplorer;
 
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) {

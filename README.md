@@ -146,7 +146,7 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 
 # Chapter 10 - sampleApp
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled.csv
-mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled_2.csv
+mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled_2.csv,transactionFile=file:./src/main/resources/input/transactions.xml,outputDirectory=file:./src/main/resources/output/file
 
 
 # clean tables without jobIdIncrementer
