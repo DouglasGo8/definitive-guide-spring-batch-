@@ -10,17 +10,15 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.apress.springbatch.mongodb.itemwriter</groupId>
-    <artifactId>definitive-guide-ch09-mongoDbItemWriter</artifactId>
+    <groupId>com.apress.springbatch.multithreaded</groupId>
+    <artifactId>definitive-guide-ch11-multithreadedJobApp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Definitive :: Guide :: Ch09 :: MongoDB :: Item Writer</name>
+    <name>Definitive :: Guide :: Ch11 :: Multithreaded</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
-    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
 
 </project>

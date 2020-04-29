@@ -148,6 +148,8 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled.csv
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled_2.csv,transactionFile=file:./src/main/resources/input/transactions.xml,outputDirectory=file:./src/main/resources/output/file
 
+# Chapter 11 - multithreadedJob
+mvn spring-boot:run -D"spring-boot.run.arguments"=inputFlatFile=file:./src/main/resources/input/bigtransactions.csv
 
 # clean tables without jobIdIncrementer
 
