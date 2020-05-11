@@ -156,3 +156,9 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=inputFlatFile=file:./src/main/
 # Cassandra Docker command Line
 
 docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
+
+# IBM MQ Light On MacOs
+minishift oc-env
+eval $(minishift oc-env)
+
+docker run --name mqlight --rm --env LICENSE=accept --env MQ_QMGR_NAME=QM1 -p 1414:1414 -p 9443:9443 ibmcom/mq
