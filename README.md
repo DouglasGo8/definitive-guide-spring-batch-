@@ -162,3 +162,9 @@ minishift oc-env
 eval $(minishift oc-env)
 
 docker run --name mqlight --rm --env LICENSE=accept --env MQ_QMGR_NAME=QM1 -p 1414:1414 -p 9443:9443 ibmcom/mq
+
+# OKD Batch
+
+oc new-build --binary --name=spring-batch-camel -l app=spring-batch-camel
+oc start-build spring-batch-camel --from-dir=. --follow
+oc new-app spring-batch-camel -l app=spring-batch-camel
