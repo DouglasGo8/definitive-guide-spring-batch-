@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="wmq" class="org.apache.camel.component.jms.JmsComponent"
+          p:username="admin"
+          p:password="passw0rd"
+          p:asyncStartListener="true"
+          p:cacheLevelName="CACHE_AUTO"
+          p:errorHandlerLoggingLevel="DEBUG"
+          p:errorHandlerLogStackTrace="true"
+          p:connectionFactory-ref="wmqConnectionFactory"
+    />
+
+    <bean id="wmqConnectionFactory" class="com.ibm.mq.jms.MQQueueConnectionFactory"
+          p:transportType="1"
+          p:queueManager="QM1"
+          p:channel="DEV.ADMIN.SVRCONN"
+          p:port="1414"
+          p:hostName="localhost"
+          p:useConnectionPooling="true"/>
+
+</beans>
