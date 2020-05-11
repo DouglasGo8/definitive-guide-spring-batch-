@@ -1,5 +1,13 @@
-
 kind: "Service"
 apiVersion: "v1"
 metadata:
-  name: "ibm-mq-light"
+  name: "mqlight-svc"
+spec:
+  ports:
+    - name: "mqlight"
+      protocol: "TCP"
+      port: 1414
+      targetPort: 1414
+      nodePort: 0
+  selector: {}
+

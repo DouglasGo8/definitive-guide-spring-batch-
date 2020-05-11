@@ -1,0 +1,11 @@
+kind: "Endpoints"
+apiVersion: "v1"
+metadata:
+  name: "mqlight-svc"
+subsets:
+  - addresses:
+      - ip: "192.168.15.18"
+    ports:
+      -
+        port: 1414
+        name: "mqlight"
