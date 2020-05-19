@@ -151,6 +151,10 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/
 # Chapter 11 - multithreadedJob
 mvn spring-boot:run -D"spring-boot.run.arguments"=inputFlatFile=file:./src/main/resources/input/bigtransactions.csv
 
+# Chapter 11 - parallelStepsJob
+mvn spring-boot:run -D"spring-boot.run.arguments"=inputFlatFile=file:./src/main/resources/input/bigtransactions.csv,inputXmlFile=file:./src/main/resources/input/bigtransactions.xml
+
+
 # clean tables without jobIdIncrementer
 
 # Cassandra Docker command Line
