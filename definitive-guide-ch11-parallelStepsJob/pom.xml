@@ -16,11 +16,6 @@
 
     <name>Definitive :: Guide :: Ch11 :: Parallel :: Steps</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>

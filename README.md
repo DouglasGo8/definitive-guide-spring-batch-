@@ -148,17 +148,16 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=customerFile=file:./src/main/r
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled.csv
 mvn spring-boot:run -D"spring-boot.run.arguments"=customerUpdateFile=file:./src/main/resources/input/customer_update_shuffled_2.csv,transactionFile=file:./src/main/resources/input/transactions.xml,outputDirectory=file:./src/main/resources/output/file
 
-# Chapter 11 - multithreadedJob
+# Chapter 11 - multiThreadedJob
 mvn spring-boot:run -D"spring-boot.run.arguments"=inputFlatFile=file:./src/main/resources/input/bigtransactions.csv
 
 # Chapter 11 - parallelStepsJob
 mvn spring-boot:run -D"spring-boot.run.arguments"=inputFlatFile=file:./src/main/resources/input/bigtransactions.csv,inputXmlFile=file:./src/main/resources/input/bigtransactions.xml
 
-
-# clean tables without jobIdIncrementer
+# Chapter 11 - partitionerMaster
+mvn spring-boot:run -D"spring-boot.run.arguments"=inputFiles=file:./src/main/resources/data/csv/transactions*.csv
 
 # Cassandra Docker command Line
-
 docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
 
 # IBM MQ Light On MacOs

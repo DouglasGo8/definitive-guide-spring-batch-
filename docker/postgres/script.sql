@@ -23,10 +23,17 @@ where a.account_id in
       (select account_account_id
        from tbl_customer_account
        where customer_customer_id = 405)
-order by t.timestamp
+order by t.timestamp;
 
+select * from tbl_customer_account;
 
-select * from tbl_customer_account
+select
+    step_name,
+    status,
+    commit_count,
+    read_count,
+    write_count
+from batch_step_execution;
 
 
 CREATE TABLE TBL_CUSTOMER_WRITER (
