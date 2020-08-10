@@ -4,6 +4,7 @@ import com.apress.springbatch.schedule.quartz.openshift.service.BatchScheduledJo
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 
 /**
  * @author dbatista
@@ -18,7 +19,7 @@ public class QuartzConfiguration {
                 .build();
     }
 
-    @Bean
+   /*@Bean
     public Trigger jobTrigger() {
 
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
@@ -29,6 +30,22 @@ public class QuartzConfiguration {
                 .forJob(quartzJobDetail())
                 .withSchedule(scheduleBuilder)
                 .build();
+    }*/
+
+    @Bean
+    public CronTriggerFactoryBean jobTrigger() {
+        CronTriggerFactoryBean cronTriggerFactoryBean = new CronTriggerFactoryBean();
+
+        cronTriggerFactoryBean.setJobDetail(quartzJobDetail());
+
+        final String cronExpression = "0 00 18 ? * MON-FRI";
+
+        //cronTriggerFactoryBean.setCronExpression("0 0/1 * 1/1 * ? *");
+        cronTriggerFactoryBean.setCronExpression(cronExpression);
+
+        return cronTriggerFactoryBean;
+
+
     }
 
 }

@@ -63,12 +63,15 @@ public class ScheduleQuartzApplication {
 
         /**
          * @param stepContribution step from Job
-         * @param chunkContext chuck data
+         * @param chunkContext     chuck data
          * @return Job Status
          */
         private RepeatStatus taskletMethod(StepContribution stepContribution, ChunkContext chunkContext) {
-            this.template.asyncSendBody("seda:jmsWrapper",
-                    String.format("Message from Apache Camel at %s", LocalDateTime.now().toString()));
+            /*this.template.asyncSendBody("seda:jmsWrapper",
+                    String.format("Message from Apache Camel at %s", LocalDateTime.now().toString()));*/
+
+            System.out.println("Hi, running at " + LocalDateTime.now().toString());
+
             return RepeatStatus.FINISHED;
         }
 

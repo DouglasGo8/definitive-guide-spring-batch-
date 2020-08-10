@@ -77,6 +77,7 @@
         <module>definitive-guide-ch11-parallelStepsJob</module>
         <module>definitive-guide-scheduleQuartz-openshift</module>
         <module>definitive-guide-ch11-partitionerMaster</module>
+        <module>definitive-guide-ch11-messageChannelPartitionHandler</module>
     </modules>
     <dependencies>
         <dependency>

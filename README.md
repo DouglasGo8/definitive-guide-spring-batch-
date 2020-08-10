@@ -157,8 +157,15 @@ mvn spring-boot:run -D"spring-boot.run.arguments"=inputFlatFile=file:./src/main/
 # Chapter 11 - partitionerMaster
 mvn spring-boot:run -D"spring-boot.run.arguments"=inputFiles=file:./src/main/resources/data/csv/transactions*.csv
 
+# scheduleQuartz - openshift
+mvn spring-boot:run
+
+
 # Cassandra Docker command Line
 docker run --name cas1 -p 9042:9042 -e CASSANDRA_CLUSTER_NAME=MyCluster -e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch -e CASSANDRA_DC=datacenter1 -d cassandra
+
+# RabbitMQ Docker command Line
+docker run -d --hostname my-rabbit --name rabbitmq -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=welcome1 rabbitmq:3-management
 
 # IBM MQ Light On MacOs
 minishift oc-env
@@ -171,3 +178,6 @@ docker run --name mqlight --rm --env LICENSE=accept --env MQ_QMGR_NAME=QM1 -p 14
 oc new-build --binary --name=spring-batch-camel -l app=spring-batch-camel
 oc start-build spring-batch-camel --from-dir=. --follow
 oc new-app spring-batch-camel -l app=spring-batch-camel
+
+
+https://www.journaldev.com/11713/spring-amqp-rabbitmq-example
